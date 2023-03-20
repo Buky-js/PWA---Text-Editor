@@ -18,7 +18,35 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      
+      // Webpack plugin for generating html file and injecting our bundles.
+			new HtmlWebpackPlugin({
+				template: "./index.html",
+				title: "Just Another Text Editor",
+			}),
+      // Injects the custom service worker
+			new InjectManifest({
+				swSrc: "./src-sw.js",
+				swDest: "src-sw.js",
+			}),
+      	// Creates a manifest.json file
+			new WebpackPwaManifest({
+				fingerprints: false,
+				inject: true,
+				name: "Just Another Text Editor",
+				short_name: "Text-Editor",
+				description: "Create notes with or without an internet connection!",
+				background_color: "#272822",
+				theme_color: "#272822",
+				start_url: "./",
+				publicPath: "./",
+				icons: [
+					{
+						src: path.resolve("src/images/logo.png"),
+						sizes: [96, 128, 192, 256, 384, 512],
+						destination: path.join("assets", "icons"),
+					},
+				],
+			}),
     ],
 
     module: {
