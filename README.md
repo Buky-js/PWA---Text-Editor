@@ -1,4 +1,4 @@
-# PWA---Text-Editor
+# PWA Text-Editor
 ## Description
 A single-page text editor that runs in the browser and works both online and offline.
 
@@ -18,9 +18,9 @@ Clone the repo and run the command 'npm install' to install all the dependencies
 To use this application, launch it using the URL of the deployed app. To download it as an icon on your destop, simply click on the 'Install' button at the top left of the page.
 
 ## URLs
-The URL of the deployed application is: 
+The URL of the deployed application is: https://damp-everglades-55411.herokuapp.com/
 
-The URL of the GitHub repository containing the code is: 
+The URL of the GitHub repository containing the code is: https://github.com/Buky-js/PWA---Text-Editor
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) <br>
